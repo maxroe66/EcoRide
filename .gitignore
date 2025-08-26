@@ -1,0 +1,46 @@
+# ==========================
+# General
+# ==========================
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+error_log
+
+# ==========================
+# Node.js (if using npm/yarn for frontend)
+# ==========================
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# ==========================
+# PHP
+# ==========================
+vendor/           # if you use Composer
+composer.lock     # optional to ignore
+.env              # environment variables (API keys, DB credentials)
+
+# ==========================
+# Databases
+# ==========================
+*.sql             # MySQL dumps
+*.sqlite
+*.db
+
+# ==========================
+# MongoDB
+# ==========================
+*.bson
+*.mongodump
+
+# ==========================
+# IDE / Editors
+# ==========================
+.vscode/
+.idea/
+*.swp
