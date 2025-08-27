@@ -1,6 +1,6 @@
 EcoRide3000
 
-Plateforme de covoiturage écologique développée dans le cadre du TP DWWM.
+Plateforme de covoiturage écologique.
 
 ## 🎯 Objectif
 Créer une application web qui favorise les déplacements en voiture électrique.
