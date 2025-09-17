@@ -1,0 +1,76 @@
+/* Styles spécifiques espace utilisateur */
+
+/* =============================================================== */
+/* 1. CONTENEUR DASHBOARD                                          */
+/* =============================================================== */
+.user-dashboard {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background-color: #F5F5DC;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+    border-radius: 12px;
+}
+
+/* =============================================================== */
+/* 2. TITRES SECTIONS                                             */
+/* =============================================================== */
+.dashboard-section h3 {
+    color: #2E7D32;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* =============================================================== */
+/* 3. GROUPES FORMULAIRE                                          */
+/* =============================================================== */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #2E7D32;
+}
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #A5D6A7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #F5F5DC;
+    transition: border 0.2s;
+}
+.form-input:focus {
+    border-color: #2E7D32;
+    outline: none;
+}
+
+/* =============================================================== */
+/* 4. BOUTON ACTION                                               */
+/* =============================================================== */
+.form-btn {
+    width: 100%;
+    background: #2E7D32;
+    color: #F5F5DC;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.form-btn:hover {
+    background: #A1887F;
+}
+
+/* =============================================================== */
+/* 5. MESSAGE FEEDBACK                                             */
+/* =============================================================== */
+#ajoutVehiculeMessage {
+    margin-top: 1em;
+    text-align: center;
+}

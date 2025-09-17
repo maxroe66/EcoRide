@@ -1,0 +1,371 @@
+/* =============================================================== */
+/* 1. CONTAINER & LAYOUT PROFIL                                   */
+/* =============================================================== */
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* =============================================================== */
+/* 2. EN-TÊTE PROFIL & AVATAR                                     */
+/* =============================================================== */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4A7C59;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #4A7C59;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+/* =============================================================== */
+/* 3. SECTIONS D'INFORMATION & CREDITS                            */
+/* =============================================================== */
+.profile-section {
+    background: #F5F5DC;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 4px solid #2E7D32;
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+.info-row:last-child {
+    border-bottom: none;
+}
+.info-label {
+    font-weight: bold;
+    color: #333;
+}
+.info-value {
+    color: #666;
+}
+.credit-display {
+    background: linear-gradient(135deg, #4A7C59, #6d9773);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* =============================================================== */
+/* 4. BOUTONS GÉNÉRIQUES & GROUPES                                */
+/* =============================================================== */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background: #4A7C59;
+    color: white;
+}
+.btn-primary:hover {
+    background: #3d6249;
+}
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background: #545b62;
+}
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* =============================================================== */
+/* 5. ÉTATS / MESSAGES & HISTORIQUE                               */
+/* =============================================================== */
+.loading {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+}
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.historique-item {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.historique-info {
+    flex: 1;
+}
+.historique-route {
+    font-weight: bold;
+    color: #4A7C59;
+    margin-bottom: 5px;
+}
+.historique-details {
+    font-size: 0.9em;
+    color: #666;
+}
+.historique-actions {
+    margin-left: 15px;
+}
+.btn-annuler {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.btn-annuler:hover {
+    background: #c82333;
+}
+.btn-annuler:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+.btn-demarrer {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+.btn-demarrer:hover {
+    background: #218838;
+}
+.btn-terminer {
+    background: #ffc107;
+    color: #212529;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.btn-terminer:hover {
+    background: #e0a800;
+}
+.btn-valider {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.btn-valider:hover {
+    background: #138496;
+}
+.historique-vide {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+.historique-item--faded {
+    opacity: .6;
+}
+.eco-badge {
+    background: #e6f7ec;
+    color: #2e7d32;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: .70rem;
+    font-weight: 600;
+}
+
+/* =============================================================== */
+/* 6. TABLEAU VÉHICULES                                           */
+/* =============================================================== */
+.table-vehicules {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.table-vehicules th {
+    background: #e0f7e9;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.table-vehicules td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: .85rem;
+}
+.table-vehicules tr:last-child td {
+    border-bottom: none;
+}
+
+/* =============================================================== */
+/* 7. MODALE CONFIRMATION TRAJET                                  */
+/* =============================================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+}
+.modal-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
+.modal-box h3 {
+    color: #4A7C59;
+    margin: 0 0 20px 0;
+}
+.modal-box label {
+    font-size: .9rem;
+}
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+.btn-close {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-close:hover {
+    background: #545b62;
+}
+
+/* =============================================================== */
+/* 8. MODALE ÉLÉMENTS INTERNES                                    */
+/* =============================================================== */
+.modal-section {
+    margin-bottom: 20px;
+}
+.modal-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.modal-sub-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.modal-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+.modal-textarea {
+    width: 100%;
+    padding: 8px;
+    resize: vertical;
+}
+.modal-textarea--small {
+    height: 80px;
+}
+.modal-textarea--large {
+    height: 100px;
+}
+
+/* =============================================================== */
+/* 9. RESPONSIVE VÉHICULES                                        */
+/* =============================================================== */
+@media (max-width: 860px) {
+    .table-vehicules {
+        width: 100%;
+        overflow-x: auto;
+        display: table;
+        border: 1px solid #eef2ee;
+    }
+    .table-vehicules::-webkit-scrollbar {
+        height: 8px;
+    }
+    .table-vehicules::-webkit-scrollbar-thumb {
+        background: #c9d9c9;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 640px) {
+    #vehiculesSection {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+    }
+    .table-vehicules {
+        display: table;
+        min-width: 720px;
+        background: #fff;
+        border: 1px solid #e2e7e2;
+        border-radius: 10px;
+    }
+    .table-vehicules th, .table-vehicules td {
+        white-space: nowrap;
+    }
+    #vehiculesSection::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(to left, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    }
+}
+
+

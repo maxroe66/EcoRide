@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur - EcoRide</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+ </head>
+ <body class="admin-page" data-page="admin">
+    <div class="page-container">
+        <!-- Modal détail covoiturage placée dans le body après le header -->
+    <div id="covoitModal" class="modal-admin is-hidden">
+            <div class="modal-content-admin">
+                <span class="modal-close-admin" id="closeCovoitModal">&times;</span>
+                <div id="covoitModalBody">Chargement...</div>
+            </div>
+        </div>
+        <div class="admin-container">
+            <h1>Espace Administrateur</h1>
+            <div id="adminStatsContainer" class="mb-30"></div>
+        <div class="charts">
+        <hr class="hr-large">
+        <section class="admin-users-section">
+            <h2>Gestion des comptes utilisateurs et employés</h2>
+                <div class="flex-between mb-30">
+                    <input id="adminUserSearch" type="text" placeholder="Rechercher un utilisateur (nom, prénom, email, rôle)" class="flex-1" style="padding:10px 12px; border-radius:6px; border:1px solid #bbb;">
+                    <button id="exportUsersCsvBtn" class="btn-secondary no-wrap" type="button">Exporter CSV</button>
+                </div>
+            <form id="formCreerEmploye" class="panel-teal mb-30">
+                <h3>Créer un employé</h3>
+                <div class="flex-wrap-gap-10">
+                    <input type="text" name="nom" placeholder="Nom" required class="flex-1">
+                    <input type="text" name="prenom" placeholder="Prénom" required class="flex-1">
+                    <input type="email" name="email" placeholder="Email" required class="flex-2">
+                    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required class="flex-1">
+                    <input type="text" name="telephone" placeholder="Téléphone" class="flex-1">
+                    <button type="submit" class="btn-primary flex-1">Créer</button>
+                </div>
+                <div id="employeMsg" class="mt-10"></div>
+            </form>
+            <div id="adminUsersContainer">
+                <!-- Tableau dynamique généré par JS -->
+            </div>
+        </section>
+            <section class="admin-covoits-section panel-green-soft my-40" >
+                <h2>Gestion des covoiturages</h2>
+                <div class="flex-between mb-30">
+                    <input id="adminCovoitSearch" type="text" placeholder="Filtrer un covoiturage (lieu, conducteur, statut...)" class="flex-1">
+                    <button id="exportCovoitsCsvBtn" class="btn-secondary no-wrap" type="button">Exporter CSV</button>
+                </div>
+                <div id="adminCovoitsContainer">Chargement...</div>
+            </section>
+            <div class="chart-block">
+                <h2>Nombre de covoiturages par jour</h2>
+                <canvas id="covoituragesChart" width="400" height="200"></canvas>
+            </div>
+            <div class="chart-block">
+                <h2>Crédits gagnés par la plateforme</h2>
+                <canvas id="creditsChart" width="400" height="200"></canvas>
+                <div id="totalCredits"></div>
+            </div>
+        </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html">contact@ecoride.fr</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -21,14 +21,17 @@ build/
 # ==========================
 # PHP
 # ==========================
-vendor/           # if you use Composer
-composer.lock     # optional to ignore
+vendor/           # Composer dependencies (re-installable)
 .env              # environment variables (API keys, DB credentials)
+
+# On conserve composer.lock pour figer les versions (ne pas l'ignorer)
+# composer.lock
 
 # ==========================
 # Databases
 # ==========================
-*.sql             # MySQL dumps
+#! On versionne les scripts SQL (création, seed) requis par l'énoncé
+#*.sql            
 *.sqlite
 *.db
 
@@ -44,3 +47,8 @@ composer.lock     # optional to ignore
 .vscode/
 .idea/
 *.swp
+
+# Logs
+backend/logs/
+logs/
+*.log

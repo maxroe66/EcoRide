@@ -1,0 +1,548 @@
+/* Responsive : masque l’en-tête du tableau en mode cartes sous 780px */
+@media (max-width: 780px) {
+    .admin-table[data-responsive="cards"] thead,
+    .admin-table[data-responsive="cards"] tr:first-child {
+        display: none !important;
+    }
+}
+/* =============================================================== */
+/* 1. MODALE ADMIN                                                 */
+/* =============================================================== */
+.modal-admin {
+    align-items: center;
+    background: rgba(30, 50, 30, 0.25);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+.modal-content-admin {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(46,125,50,0.18);
+    font-family: 'Roboto', sans-serif;
+    max-width: 480px;
+    padding: 32px 24px 24px 24px;
+    position: relative;
+    width: 95vw;
+}
+.modal-close-admin {
+    color: #A1887F;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    transition: color 0.2s;
+}
+.modal-close-admin:hover {
+    color: #c62828;
+}
+.modal-content-admin h3 {
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+.modal-content-admin ul {
+    margin: 0 0 10px 0;
+    padding-left: 18px;
+}
+.modal-content-admin .modal-label {
+    color: #388e3c;
+    font-weight: 500;
+}
+.modal-content-admin .modal-row {
+    margin-bottom: 8px;
+}
+.modal-content-admin .modal-row span {
+    font-weight: 400;
+}
+
+/* =============================================================== */
+/* 2. LAYOUT GÉNÉRAL / CONTENEURS                                 */
+/* =============================================================== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.admin-container {
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(46,125,50,0.08);
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 30px 30px 10px 30px;
+}
+h1, h2, h3 {
+    color: #2E7D32;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.admin-users-section,
+.admin-covoits-section,
+.admin-avis-section {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(46,125,50,0.06);
+    margin-bottom: 40px;
+    padding: 24px 18px 18px 18px;
+}
+.admin-users-section h2,
+.admin-covoits-section h2,
+.admin-avis-section h3 {
+    margin-bottom: 18px;
+}
+
+/* =============================================================== */
+/* 3. FORMULAIRES                                                  */
+/* =============================================================== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: #f9fbe7;
+    border: 1.5px solid #A5D6A7;
+    border-radius: 7px;
+    color: #1B3B1B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background: #fffde7;
+    border-color: #2E7D32;
+    outline: none;
+}
+
+/* =============================================================== */
+/* 4. TABLES                                                       */
+/* =============================================================== */
+.admin-table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+}
+.admin-table {
+    background: #f9fbe7;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(46,125,50,0.04);
+    margin-top: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.admin-table th,
+.admin-table td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 8px;
+    text-align: left;
+}
+.admin-table th {
+    background: #A5D6A7;
+    color: #1B3B1B;
+    font-weight: 600;
+}
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+.admin-table tr:hover {
+    background: #e8f5e9;
+}
+.admin-table td .btn-primary,
+.admin-table td .btn-secondary {
+    background: #2E7D32 !important;
+    color: #ffffff !important;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* =============================================================== */
+/* 5. BOUTONS                                                      */
+/* =============================================================== */
+.btn-primary,
+.btn-secondary {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+    background: #2E7D32;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background: #388e3c;
+}
+.btn-secondary {
+    background: #A1887F;
+    color: #ffffff;
+    margin-left: 4px;
+}
+.btn-secondary:hover {
+    background: #8D6E63;
+}
+
+/* =============================================================== */
+/* 6. STATUTS                                                      */
+/* =============================================================== */
+.status-actif {
+    color: #2E7D32;
+    font-weight: 500;
+}
+.status-suspendu {
+    color: #c62828;
+    font-weight: 500;
+}
+.status-termine {
+    color: #388e3c;
+    font-weight: 500;
+}
+.status-annule {
+    color: #c62828;
+    font-weight: 500;
+}
+.status-en_cours {
+    color: #fbc02d;
+    font-weight: 500;
+}
+.status-planifie {
+    color: #1976d2;
+    font-weight: 500;
+}
+
+/* =============================================================== */
+/* 7. CHARTS / BLOCS GRAPHIQUES                                    */
+/* =============================================================== */
+.chart-block {
+    flex: 1 1 320px;
+    min-width: 260px;
+}
+.chart-block canvas {
+    aspect-ratio: 16/9;
+    height: auto !important;
+    width: 100% !important;
+}
+
+/* =============================================================== */
+/* 8. GRILLE STATS                                                 */
+/* =============================================================== */
+#adminStatsContainer {
+    flex-wrap: wrap;
+}
+#adminStatsContainer > div {
+    flex: 1 1 160px;
+}
+.admin-stats-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    margin-bottom: 22px;
+}
+.admin-stat {
+    background: #ffffff;
+    border: 1px solid #dbe7db;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    padding: 14px 12px;
+    text-align: center;
+}
+.admin-stat h4 {
+    color: #2E7D32;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin: 0 0 4px;
+    text-transform: uppercase;
+}
+.admin-stat .value {
+    color: #1B3B1B;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* =============================================================== */
+/* 9. UTILITAIRES GÉNÉRIQUES                                       */
+/* =============================================================== */
+.flex-between {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.flex-wrap-gap-10 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.no-wrap {
+    white-space: nowrap;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+.mt-10 {
+    margin-top: 10px !important;
+}
+.my-40 {
+    margin: 40px 0 !important;
+}
+.hr-large {
+    margin: 40px 0;
+}
+.panel-teal {
+    background: #e0f2f1;
+    border-radius: 8px;
+    padding: 15px;
+}
+.panel-green-soft {
+    background: #f1f8e9;
+    border-radius: 8px;
+    padding: 15px;
+}
+.is-hidden {
+    display: none !important;
+}
+/* Nouvelles variantes de fond pour cartes stats (ex inline styles) */
+.stat-bg-users { background: var(--stat-bg-users, #e0f7fa) !important; }
+.stat-bg-employes { background: var(--stat-bg-employes, #ffe0b2) !important; }
+.stat-bg-admins { background: var(--stat-bg-admins, #c8e6c9) !important; }
+.stat-bg-suspendus { background: var(--stat-bg-suspendus, #ffcdd2) !important; }
+/* =============================================================== */
+/* 10. OVERRIDES PAGE ADMIN SCOPÉS                                 */
+/* =============================================================== */
+body.admin-page .admin-container {
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(46,125,50,0.08);
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 20px;
+}
+body.admin-page h1,
+body.admin-page h2 {
+    text-align: center;
+}
+body.admin-page .charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+body.admin-page .chart-block {
+    flex: 1 1 350px;
+    min-width: 300px;
+}
+#totalCredits {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+body.admin-page #adminStatsContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+body.admin-page hr.hr-large {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* =============================================================== */
+/* 11. MEDIA QUERIES                                               */
+/* =============================================================== */
+@media (max-width: 640px) {
+    .chart-block {
+        flex: 1 1 100%;
+        min-width: 100% !important;
+    }
+}
+@media (max-width: 520px) {
+    #adminStatsContainer {
+        gap: 12px !important;
+    }
+    #adminStatsContainer > div {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 140px;
+        padding: 14px 18px !important;
+    }
+    .modal-content-admin {
+        padding: 26px 18px 18px 18px;
+    }
+    .modal-content-admin h3 {
+        font-size: 1.05rem;
+    }
+}
+@media (max-width: 400px) {
+    #adminStatsContainer > div {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 800px) {
+    .admin-container {
+        padding: 10px;
+    }
+    .admin-table th,
+    .admin-table td {
+        font-size: 0.95em;
+        padding: 7px 4px;
+    }
+}
+@media (max-width: 1050px) {
+    .admin-table-wrapper::after {
+        background: linear-gradient(to left, rgba(248,248,248,0.95), rgba(248,248,248,0));
+        content: "";
+        height: 100%;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+    }
+    .admin-table {
+        min-width: 880px;
+    }
+}
+@media (max-width: 900px) {
+    .admin-container {
+        padding: 26px 20px 10px 20px;
+    }
+    .admin-table {
+        min-width: 780px;
+    }
+    #adminStatsContainer > div {
+        flex: 1 1 calc(50% - 14px);
+    }
+    .admin-table th,
+    .admin-table td {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 820px) {
+    .admin-table {
+        min-width: 740px;
+    }
+}
+@media (max-width: 780px) {
+    .admin-table {
+        min-width: 100% !important;
+    }
+    #adminStatsContainer > div {
+        flex: 1 1 100%;
+    }
+    .admin-table[data-responsive="cards"] {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    .admin-table[data-responsive="cards"] thead {
+        display: none;
+    }
+    .admin-table[data-responsive="cards"] tr {
+        background: #ffffff;
+        border: 1px solid #e0e6df;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        display: block;
+        margin: 0 0 14px;
+        padding: 6px 10px 4px;
+    }
+    .admin-table[data-responsive="cards"] td {
+        border: none;
+        display: flex;
+        font-size: .8rem;
+        gap: 10px;
+        line-height: 1.25;
+        padding: 6px 4px;
+    }
+    .admin-table[data-responsive="cards"] td + td {
+        border-top: 1px dashed #eff2ed;
+    }
+    .admin-table[data-responsive="cards"] td::before {
+        color: #2E7D32;
+        content: attr(data-label);
+        flex: 0 0 92px;
+        font-size: .6rem;
+        font-weight: 600;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 680px) {
+    .admin-users-section,
+    .admin-covoits-section,
+    .admin-avis-section {
+        padding: 18px 14px 14px 14px;
+    }
+    .admin-container {
+        margin: 20px auto;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    .admin-table th,
+    .admin-table td {
+        font-size: 0.82rem;
+        padding: 6px 6px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    .admin-table {
+        min-width: 100% !important;
+        table-layout: fixed;
+    }
+}
+@media (max-width: 430px) {
+    h1 {
+        font-size: 1.35rem;
+    }
+    h2 {
+        font-size: 1.05rem;
+    }
+    .btn-primary,
+    .btn-secondary {
+        font-size: .75rem;
+        padding: 5px 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: .8rem;
+        padding: 8px 10px;
+    }
+    .admin-container {
+        margin: 16px 8px;
+        padding: 18px 14px 8px 14px;
+    }
+}
+.chart-empty-msg { text-align:center; font-size:0.9rem; color:#555; margin:8px 0 0; }
+:root {
+  --color-chart-covoits: rgba(75, 192, 192, 0.5); /* ancienne valeur inline */
+  --color-chart-credits: rgba(255, 159, 64, 0.5); /* ancienne valeur inline */
+  --stat-bg-users: #e0f7fa;
+  --stat-bg-employes: #ffe0b2;
+  --stat-bg-admins: #c8e6c9;
+  --stat-bg-suspendus: #ffcdd2;
+}
+

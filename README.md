@@ -1,71 +1,41 @@
-EcoRide3000
+# 🚗💚 EcoRide — Guide de déploiement local (ECF)
 
-Plateforme de covoiturage écologique.
+Ce dépôt contient l’application EcoRide. Cette page décrit uniquement la mise en place locale attendue pour l’ECF. La documentation détaillée reste disponible dans `docs/` (liens en bas).
 
-## 🎯 Objectif
-Créer une application web qui favorise les déplacements en voiture électrique.
+## Prérequis
+- Windows + XAMPP (Apache + MySQL/MariaDB)
+- PHP 8+ (inclus dans XAMPP)
 
-## 🧩 Fonctionnalités (User Stories)
-- Page d’accueil avec recherche d’itinéraire
-- Menu de navigation
-- Recherche et filtres de covoiturage
-- Vue détaillée d’un trajet
-- Création de compte (20 crédits offerts)
-- Réservation de covoiturage
-- Espace utilisateur (chauffeur/passager)
-- Historique des trajets
-- Espace employé et administrateur
+## Installation rapide (Windows/XAMPP)
+1. Placez le dossier du projet dans `c:\xampp\htdocs\EcoRide`
+2. Démarrez Apache et MySQL depuis XAMPP
+3. Créez la base `ecoride` puis importez `backend/database.sql` via phpMyAdmin
+4. Vérifiez la connexion DB dans `backend/config/config.php` (host/user/password)
+5. (Optionnel) Importez des données de démo:
+   - Soit `backend/seed_demo_ready.sql` (généré via le script ci-dessous)
+   - Soit `backend/seed_demo.sql` après avoir remplacé les `<HASH_...>` par des bcrypt
+6. Ouvrez le front: `http://localhost/EcoRide/front_end/html/accueil.html`
 
-## 🛠️ Stack technique
-- **Front-end** : HTML5, CSS3 (Bootstrap), JavaScript
-- **Back-end** : PHP (PDO)
-- **BDD relationnelle** : MySQL
-- **BDD NoSQL** : MongoDB (avis de trajets)
-- **Déploiement** : Vercel / Heroku / Fly.io
-
-## 🚀 Installation locale
-```bash
-# Cloner le dépôt
-git clone https://github.com/ton-utilisateur/EcoRide3000.git
-
-# Se placer dans le dossier
-cd EcoRide3000
-
-# Importer la base de données
-mysql -u root -p < database/schema.sql
-
-# Lancer le serveur local (ex: XAMPP, WAMP)
+## Générer le seed prêt à l’emploi (optionnel)
+Dans PowerShell à la racine du projet:
 ```
+php backend\scripts\generate_seed.php > backend\seed_demo_ready.sql
+```
+Importez ensuite `backend/seed_demo_ready.sql` dans phpMyAdmin.
 
-## 🔐 Identifiants de test
-- Utilisateur : `test@ecoride.fr` / `motdepasse123`
-- Employé : `employe@ecoride.fr` / `motdepasse123`
-- Admin : `admin@ecoride.fr` / `motdepasse123`
+## URLs utiles (smoke test)
+- API base: `http://localhost/EcoRide/api`
+- GET `http://localhost/EcoRide/api/ping`
+- GET `http://localhost/EcoRide/api/csrf-token`
 
-## 📎 Liens utiles
-- [Trello - Gestion de projet](https://trello.com/invite/b/68a9de30f74a1f0afbd8c3d0/ATTIa55b19cb101a14461a811192b4e4e432F4967AF9/ecoride3000)
-- [Maquettes Figma]
-(Maquettes Figma (PDF))
-- [Charte graphique PDF](lien_vers_charte_graphique)
-- [Documentation technique](lien_vers_doc_technique)
-- [Manuel d’utilisation PDF](lien_vers_manuel_utilisation)
+## Mails (optionnel)
+Vous pouvez créer un fichier `.env` à la racine pour configurer PHPMailer. Avec `MAIL_DRY_RUN=true`, les emails de démo sont écrits dans `backend/logs/mail_test.log`. Voir détails dans la doc complète.
 
-## 📂 Structure Git recommandée
-- Branche principale : `main`
-- Branche de développement : `develop`
-- Branches fonctionnelles : `feature/nom_fonctionnalite`
+## Liens documentation
+- Doc complète: `docs/README_Complet.md`
+- Manuel d’utilisation (PDF/Markdown): `docs/Manuel_utilisation_EcoRide.md`
+- Soutenance: `docs/README_Soutenance.md`
 
-Chaque fonctionnalité est développée sur une branche dédiée, testée, puis fusionnée dans `develop`. Une fois stable, `develop` est fusionnée dans `main`.
+---
+(c) Projet pédagogique – ECF EcoRide
 
-## 📄 Livrables attendus
-- Code source sur GitHub (public)
-- Application déployée
-- Maquettes (3 desktop + 3 mobile)
-- Charte graphique
-- Documentation technique
-- Manuel d’utilisation
-- Kanban Trello
-
-
-    Liens
-  Trello : Tableau kanban (https://trello.com/invite/b/68a9de30f74a1f0afbd8c3d0/ATTIa55b19cb101a14461a811192b4e4e432F4967AF9/ecoride3000)

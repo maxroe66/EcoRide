@@ -1,0 +1,373 @@
+/* 4. TABLEAU HISTORIQUE LITIGES (mêmes styles que problemes-container) */
+.litiges-historique-container {
+    overflow-x: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.litiges-historique-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.litiges-historique-container th, .litiges-historique-container td {
+    border: 1px solid #e57373;
+    padding: 10px;
+    text-align: left;
+}
+.litiges-historique-container th {
+    background: #ffcdd2; /* rose pâle */
+    color: #b71c1c;
+}
+.litiges-historique-container tr:nth-child(even) {
+    background: #fff3e0;
+}
+.litiges-historique-container tr:nth-child(odd) {
+    background: #fff;
+}
+.litiges-historique-container h2 {
+    color: #b71c1c;
+    margin-bottom: 10px;
+    font-size: 1.25em;
+}
+/* Style spécifique pour le bouton litige (incident) */
+.btn-annuler {
+    background: #b71c1c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-weight: 600;
+    cursor: not-allowed;
+    opacity: 0.95;
+    box-shadow: 0 1px 3px rgba(183,28,28,0.12);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    min-width: 44px;
+}
+.btn-annuler:disabled {
+    background: #b71c1c;
+    color: #fff;
+    opacity: 0.85;
+}
+/* Styles spécifiques à l'espace employé EcoRide */
+
+/* =============================================================== */
+/* 1. SECTION PRINCIPALE                                          */
+/* =============================================================== */
+.employe-section {
+    background: #f9fbe7;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #cfd8dc;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* =============================================================== */
+/* 2. TABLEAU AVIS EN ATTENTE                                     */
+/* =============================================================== */
+.avis-en-attente-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Responsive pour le tableau des avis en attente */
+.avis-en-attente-container {
+    overflow-x: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.avis-en-attente-container th, .avis-en-attente-container td {
+    border: 1px solid #cfd8dc;
+    padding: 10px;
+    text-align: left;
+}
+.avis-en-attente-container th {
+    background: #dcedc8;
+    color: #33691e;
+}
+.avis-en-attente-container tr:nth-child(even) {
+    background: #f1f8e9;
+}
+.btn-secondary {
+    background: #8bc34a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    margin: 0 4px 0 0;
+    font-size: 0.85rem;
+    min-width: 44px;
+}
+.btn-secondary:hover {
+    background: #558b2f;
+}
+
+/* =============================================================== */
+/* 3. TABLEAU INCIDENTS                                           */
+/* =============================================================== */
+.problemes-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+.problemes-container h2 {
+    margin-top: 40px;
+}
+.problemes-container th, .problemes-container td {
+    border: 1px solid #e0b4b4;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+.problemes-container th {
+    background: #ffcdd2; /* rose pâle */
+    color: #b71c1c;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.problemes-container tr:nth-child(even) {
+    background: #fff5f5;
+}
+.problemes-container tr:nth-child(odd) {
+    background: #ffeeee;
+}
+.problemes-container td a {
+    color: #1565c0;
+    text-decoration: none;
+}
+.problemes-container td a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================================== */
+/* 4. BADGES / TAGS ESCROW                                        */
+/* =============================================================== */
+.badge-escrow {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    background: #eceff1;
+    color: #37474f;
+}
+.badge-escrow.pending {
+    background: #fff3cd;
+    color: #9c6f00;
+}
+.badge-escrow.released {
+    background: #c8e6c9;
+    color: #1b5e20;
+}
+.badge-escrow.refunded {
+    background: #ffe0b2;
+    color: #e65100;
+}
+
+/* =============================================================== */
+/* 9. BADGE STATUT AVIS (validation / refus)                      */
+/* =============================================================== */
+.badge-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.70rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    background: #eceff1;
+    color: #37474f;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    text-transform: uppercase;
+}
+.badge-status.approved {
+    background: #c8e6c9;
+    color: #1b5e20;
+}
+.badge-status.refused {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+.badge-escrow.refunded {
+    background: #ffe0b2;
+    color: #e65100;
+}
+
+/* =============================================================== */
+/* 5. COLONNE ACTIONS / BOUTONS                                   */
+/* =============================================================== */
+.problemes-container td .btn-secondary {
+    min-width: 72px;
+    margin: 2px 4px;
+}
+.problemes-container td .btn-compact {
+    min-width: auto;
+    padding: 4px 8px;
+    font-size: 0.70rem;
+    line-height: 1;
+    letter-spacing: .5px;
+}
+.problemes-container td .btn-secondary.btn-compact {
+    white-space: nowrap;
+}
+.problemes-container td:last-child {
+    white-space: nowrap;
+}
+.actions-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    margin-left: -2px;
+}
+.actions-col .btn-secondary {
+    width: 78px;
+    margin: 2px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.problemes-container td.actions-cell {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* =============================================================== */
+/* 6. RESPONSIVE TABLE INCIDENTS                                  */
+/* =============================================================== */
+@media (max-width:700px) {
+    .problemes-container table, .problemes-container thead, .problemes-container tbody, .problemes-container th, .problemes-container td, .problemes-container tr {
+        display: block;
+    }
+    .problemes-container tr {
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.08);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .problemes-container th {
+        display: none;
+    }
+    .problemes-container td {
+        border: none;
+        position: relative;
+        padding-left: 110px;
+    }
+    .problemes-container td:before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: .7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        color: #b71c1c;
+    }
+    .problemes-container td:nth-of-type(1):before {
+        content: 'ID';
+    }
+    .problemes-container td:nth-of-type(2):before {
+        content: 'Incident';
+    }
+    .problemes-container td:nth-of-type(3):before {
+        content: 'Trajet';
+    }
+    .problemes-container td:nth-of-type(4):before {
+        content: 'Date';
+    }
+    .problemes-container td:nth-of-type(5):before {
+        content: 'Passager';
+    }
+    .problemes-container td:nth-of-type(6):before {
+        content: 'Chauffeur';
+    }
+    .problemes-container td:nth-of-type(7):before {
+        content: 'Escrow';
+    }
+    .problemes-container td:nth-of-type(8):before {
+        content: 'Description';
+    }
+    .problemes-container td:nth-of-type(9):before {
+        content: 'Actions';
+    }
+        /* Décalage à droite des boutons d'action dans la colonne Actions */
+    .problemes-container td.actions-cell .actions-col {
+        align-items: flex-start;
+        margin-left: 24px;
+    }
+    .problemes-container td.actions-cell {
+        padding-left: 134px;
+    }
+}
+
+/* =============================================================== */
+/* 7. CONTENEUR INCIDENTS (OVERFLOW / TAILLE)                     */
+/* =============================================================== */
+.problemes-container {
+    margin-top: 35px;
+    background: #fffefc;
+    border: 1px solid #f3d4d4;
+    padding: 14px 18px 24px;
+    border-radius: 12px;
+    overflow-x: auto; /* scroll horizontal si nécessaire */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.problemes-container table {
+    table-layout: auto;
+    min-width: 1000px;
+}
+.problemes-container th, .problemes-container td {
+    word-break: normal;
+    white-space: nowrap;
+}
+.problemes-container td:nth-child(8) {
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.problemes-container td:nth-child(5), .problemes-container td:nth-child(6) {
+    max-width: 200px;
+}
+
+/* =============================================================== */
+/* 8. BOUTON RETOUR                                               */
+/* =============================================================== */
+.back-section {
+    max-width: 900px;
+    margin: 20px auto 0;
+}
+.back-btn {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color .25s ease, transform .2s ease, box-shadow .25s ease;
+}
+.back-btn:hover {
+    background-color: #A1887F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.back-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.back-btn::before {
+    content: '←';
+    font-size: 1rem;
+    line-height: 1;
+}

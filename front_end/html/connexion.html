@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - EcoRide</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/connexion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+ </head>
+ <body data-page="connexion">
+    <div class="page-container">
+
+        <main>
+            <div class="login-container">
+                <div class="login-tabs">
+                    <button class="tab-button active" data-tab="login">Se connecter</button>
+                    <button class="tab-button" data-tab="register">Créer un compte</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Messages d'erreur et de succès (masqués par défaut) -->
+                    <div class="error-message" id="errorMessage" role="alert" aria-live="assertive" style="display:none"></div>
+                    <div class="success-message" id="successMessage" role="status" aria-live="polite" style="display:none"></div>
+
+                    <!-- Onglet Connexion -->
+                    <div class="tab-panel active" id="login">
+                        <h2 class="form-title">Se connecter à EcoRide</h2>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">Mot de passe</label>
+                                <input type="password" id="loginPassword" name="password" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Se connecter</button>
+                        </form>
+                    </div>
+
+                    <!-- Onglet Inscription -->
+                    <div class="tab-panel" id="register">
+                        <h2 class="form-title">Créer votre compte EcoRide</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="registerNom">Nom</label>
+                                <input type="text" id="registerNom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerPrenom">Prénom</label>
+                                <input type="text" id="registerPrenom" name="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerPseudo">Pseudo</label>
+                                <input type="text" id="registerPseudo" name="pseudo" maxlength="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerEmail">Email</label>
+                                <input type="email" id="registerEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerPassword">Mot de passe</label>
+                                <input type="password" id="registerPassword" name="password" required>
+                                <div class="password-requirements">
+                                    <h4>Mot de passe sécurisé requis :</h4>
+                                    <ul>
+                                        <li>Au moins 8 caractères</li>
+                                        <li>Une lettre majuscule</li>
+                                        <li>Une lettre minuscule</li>
+                                        <li>Un chiffre</li>
+                                        <li>Un caractère spécial (@, #, $, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirmer le mot de passe</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Créer mon compte</button>
+                            <div class="credits-info">
+                                🎉 Recevez 20 crédits gratuits à l'inscription !
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html">contact@ecoride.fr</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="../js/main.js"></script>
+ </body>
+</html>

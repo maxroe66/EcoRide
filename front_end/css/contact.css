@@ -1,0 +1,267 @@
+/* =============================================================== */
+/* 1. LAYOUT / CONTENEUR PRINCIPAL                                */
+/* =============================================================== */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* =============================================================== */
+/* 2. ENTÊTE DE PAGE                                              */
+/* =============================================================== */
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact-header h1 {
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.contact-header p {
+    color: #1B3B1B;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =============================================================== */
+/* 3. GRILLE CONTENU PRINCIPAL                                    */
+/* =============================================================== */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* =============================================================== */
+/* 4. BLOC INFORMATIONS                                           */
+/* =============================================================== */
+.contact-info {
+    background: #F5F5DC;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,1);
+}
+.contact-info h2 {
+    color: #4A7C59;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.info-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #A5D6A7;
+}
+.info-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.info-section h3 {
+    color: #4A7C59;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0;
+}
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+.contact-item .label {
+    font-weight: 500;
+    color: #4A7C59;
+}
+.contact-link {
+    color: #1B3B1B;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.contact-link:hover {
+    color: #8D6E63;
+    text-decoration: underline;
+}
+.info-section p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* =============================================================== */
+/* 5. LIENS UTILES                                                */
+/* =============================================================== */
+.useful-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.link-item {
+    color: #2196F3;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E0E0E0;
+    transition: color 0.3s ease;
+}
+.link-item:hover {
+    color: #1976D2;
+}
+.link-item:last-child {
+    border-bottom: none;
+}
+
+/* =============================================================== */
+/* 6. FORMULAIRE                                                  */
+/* =============================================================== */
+.contact-form-section {
+    background: #F5F5DC;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,1);
+}
+.contact-form-section h2 {
+    color: #2E7D32;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-group label {
+    font-weight: 500;
+    color: #2E7D32;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.form-group select {
+    cursor: pointer;
+}
+
+/* =============================================================== */
+/* 7. CHECKBOX PERSONNALISÉE                                      */
+/* =============================================================== */
+.checkbox-group {
+    margin-top: 0.5rem;
+}
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+}
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2E7D32;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    margin-top: 2px;
+}
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+}
+.checkbox-label input[type="checkbox"]:checked + .checkmark::before {
+    content: "✓";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =============================================================== */
+/* 8. BOUTON D'ENVOI & ÉTATS                                      */
+/* =============================================================== */
+.submit-btn {
+    background-color: #4A7C59;
+    color: white;
+    border: none;
+    padding: 1.25rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+.submit-btn:hover {
+    background-color: #A1887F;
+    transform: translateY(-2px);
+}
+.submit-btn:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    transform: none;
+}
+#confirmEmail {
+    font-weight: 500;
+    color: #8D6E63;
+}
+
+/* =============================================================== */
+/* 9. MEDIA QUERIES                                               */
+/* =============================================================== */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-info,
+    .contact-form-section {
+        padding: 1.5rem;
+    }
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    .useful-links {
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 1.8rem;
+    }
+    .contact-header p {
+        font-size: 1rem;
+    }
+    .contact-info,
+    .contact-form-section {
+        padding: 1rem;
+    }
+    .submit-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}

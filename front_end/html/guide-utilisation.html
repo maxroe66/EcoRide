@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide d'utilisation - EcoRide</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/info-pages.css" />
+</head>
+<body>
+  <h1>Guide d'utilisation EcoRide</h1>
+  <p>Ce guide explique les principales fonctionnalités de la plateforme, du premier accès jusqu'à la gestion avancée des trajets.</p>
+
+  <div class="toc">
+    <strong>Sommaire</strong>
+    <a href="#compte">1. Création de compte & connexion</a>
+    <a href="#profil">2. Profil & véhicule</a>
+    <a href="#recherche">3. Rechercher un covoiturage</a>
+    <a href="#participer">4. Participer à un trajet</a>
+    <a href="#creer-trajet">5. Créer un covoiturage (conducteur)</a>
+    <a href="#statuts">6. Statuts d'un covoiturage</a>
+    <a href="#credits">7. Crédits & escrow</a>
+    <a href="#avis">8. Avis & notation</a>
+    <a href="#annulation">9. Annulation & problème</a>
+    <a href="#securite">10. Sécurité & bonnes pratiques</a>
+    <a href="#support">11. Support & aide</a>
+  </div>
+
+  <section id="compte">
+    <h2>1. Création de compte & connexion</h2>
+    <div class="step"><span class="badge">Étape</span> Allez sur <a href="connexion.html">Connexion</a> puis onglet création.</div>
+    <div class="step"><span class="badge">Info</span> Un bonus initial de <strong>20 crédits</strong> est offert.</div>
+    <div class="note">Gardez votre email valide : il sert aux notifications (trajet terminé, annulation, etc.).</div>
+  </section>
+
+  <section id="profil">
+    <h2>2. Profil & véhicule</h2>
+    <p>Depuis l'espace utilisateur : complétez vos informations de profil. Pour devenir conducteur, ajoutez un véhicule (modèle, plaque, énergie).</p>
+    <div class="grid">
+      <div class="card"><h3>Profil</h3><p>Données personnelles et préférences.</p></div>
+      <div class="card"><h3>Véhicule</h3><p>Nécessaire pour créer un trajet.</p></div>
+      <div class="card"><h3>Historique</h3><p>Vos trajets passés & participations.</p></div>
+    </div>
+  </section>
+
+  <section id="recherche">
+    <h2>3. Rechercher un covoiturage</h2>
+    <p>Utilisez la page <a href="covoiturage.html">Covoiturage</a> pour filtrer par ville de départ, destination, date. Cliquez sur un trajet pour voir les détails (conducteur, places, note, avis).</p>
+  </section>
+
+  <section id="participer">
+    <h2>4. Participer à un trajet</h2>
+    <ol>
+      <li>Ouvrez la fiche trajet.</li>
+      <li>Vérifiez la disponibilité & votre solde de crédits.</li>
+      <li>Cliquez Participer puis confirmez.</li>
+      <li>Vos crédits passent en statut retenu (escrow).</li>
+    </ol>
+    <div class="note">La participation peut être refusée si le trajet est plein ou statut incompatible.</div>
+  </section>
+
+  <section id="creer-trajet">
+    <h2>5. Créer un covoiturage (conducteur)</h2>
+    <p>Après ajout d'un véhicule : allez sur la page de création, indiquez origine, destination, date/heure, nombre de places, coût en crédits.</p>
+    <p>Une fois publié, des passagers peuvent demander à participer jusqu'à validation du trajet.</p>
+  </section>
+
+  <section id="statuts">
+    <h2>6. Statuts d'un covoiturage</h2>
+    <ul>
+      <li><strong>planifie</strong> : créé, en attente de départ.</li>
+      <li><strong>en_cours</strong> : démarré.</li>
+      <li><strong>termine</strong> : finalisé (transfert de crédits possible).</li>
+      <li><strong>annule</strong> : annulé par conducteur ou règles.</li>
+      <li><strong>probleme</strong> : signalé, en analyse.</li>
+    </ul>
+  </section>
+
+  <section id="credits">
+    <h2>7. Crédits & escrow</h2>
+    <p>Le système retient les crédits des passagers confirmés jusqu'à la fin. À la terminaison validée, les crédits sont transférés au conducteur.</p>
+    <div class="warn">Si un problème est déclaré, les crédits restent bloqués jusqu'à résolution.</div>
+  </section>
+
+  <section id="avis">
+    <h2>8. Avis & notation</h2>
+    <p>Après un trajet terminé, les passagers peuvent laisser un avis. Il est modéré avant publication. La note globale est la moyenne des avis validés.</p>
+  </section>
+
+  <section id="annulation">
+    <h2>9. Annulation & problème</h2>
+    <p>Un trajet peut être annulé avant son démarrage selon conditions. Un participant peut déclarer un problème lors de la validation finale : statut <em>probleme</em>.</p>
+  </section>
+
+  <section id="securite">
+    <h2>10. Sécurité & bonnes pratiques</h2>
+    <ul>
+      <li>Profil réel & complet</li>
+      <li>Communication respectueuse</li>
+      <li>Pas d'échange d'argent hors plateforme</li>
+      <li>Signaler tout comportement inapproprié</li>
+    </ul>
+  </section>
+
+  <section id="support">
+    <h2>11. Support & aide</h2>
+    <p>Consultez la <a href="faq.html">FAQ</a>, puis utilisez le <a href="contact.html">formulaire de contact</a> si nécessaire.</p>
+  </section>
+
+  <p class="back"><a href="contact.html">← Retour page Contact</a></p>
+  <p class="back"><a href="accueil.html">← Accueil</a></p>
+
+  </footer>
+  </div>
+  <!-- Entry point unique -->
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Réécriture vers le front controller unique
+RewriteEngine On
+
+# Laisser passer les fichiers / dossiers existants (assets)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Tout le reste va vers index.php
+RewriteRule ^ index.php [QSA,L]

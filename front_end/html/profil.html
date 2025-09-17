@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - EcoRide</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profil.css">
+    <style>
+        
+    </style>
+ </head>
+ <body data-page="profil">
+    <div class="page-container">
+        <main>
+    <div class="profile-container">
+            <div id="loadingMessage" class="loading">
+                Chargement de votre profil...
+            </div>
+
+            <div id="profileContent" style="display: none;">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="userAvatar">
+                        <!-- Initiales générées dynamiquement -->
+                    </div>
+                    <h1 id="userName">Mon Profil</h1>
+                    <p id="userEmail" style="color: #666;"></p>
+                    <div id="userStatut" style="margin-top:10px;font-weight:bold;color:#4A7C59;"></div>
+                    <div id="btnChauffeurContainer" style="margin-top:15px;"></div>
+                    <div id="btnPassagerContainer" style="margin-top:10px;"></div>
+                    <div id="passagerMessage" class="success-message" style="display:none;margin-top:10px;">Vous êtes maintenant passager ✅</div>
+                </div>
+
+                <div class="credit-display">
+                    💰 Solde actuel : <span id="userCredit">0</span>€
+                </div>
+
+                <div class="profile-section">
+                    <h3>📋 Informations personnelles</h3>
+                    <div class="info-row">
+                        <span class="info-label">Nom :</span>
+                        <span class="info-value" id="infoNom">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Prénom :</span>
+                        <span class="info-value" id="infoPrenom">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Email :</span>
+                        <span class="info-value" id="infoEmail">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Membre depuis :</span>
+                        <span class="info-value" id="infoDateInscription">-</span>
+                    </div>
+                    
+                    <!-- Section préférences chauffeur -->
+                    <div id="preferencesDisplay" style="display: none; margin-top: 30px; padding-top: 20px; border-top: 2px solid #e9ecef;">
+                        <h4 style="color: #4A7C59; margin-bottom: 15px;">🚗 Préférences de conduite</h4>
+                        <div class="info-row">
+                            <span class="info-label">Fumeur :</span>
+                            <span class="info-value" id="infoPrefFumeur">-</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Animaux :</span>
+                            <span class="info-value" id="infoPrefAnimaux">-</span>
+                        </div>
+                        <div class="info-row" id="autresPreferencesRow" style="display: none;">
+                            <span class="info-label">Autres préférences :</span>
+                            <span class="info-value" id="infoAutresPreferences">-</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Section véhicules -->
+                    <div id="vehiculesSection" style="margin-top:30px;"></div>
+                </div>
+
+                <!-- Statistiques -->
+                <div class="profile-section">
+                    <h3>📊 Informations sur votre statut</h3>
+                    <div class="info-row">
+                        <span class="info-label">Covoiturages proposés :</span>
+                        <span class="info-value" id="statsCovoiturages">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Participations :</span>
+                        <span class="info-value" id="statsParticipations">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Économies CO2 :</span>
+                        <span class="info-value" id="statsEconomies">Calcul en cours...</span>
+                    </div>
+                </div>
+
+                <!-- Historique détaillé -->
+                <div class="profile-section" id="historiqueSection">
+                    <h3>📋 Historique des covoiturages</h3>
+                    <div id="historiqueContent">
+                        <div class="loading">Chargement de l'historique...</div>
+                    </div>
+                </div>
+
+                <!-- Groupe de boutons dynamique (ajout covoiturage) -->
+                <div class="btn-group"></div>
+            </div>
+            <div id="errorMessage" class="error" style="display: none;">
+                Erreur lors du chargement du profil. 
+                <a href="connexion.html">Veuillez vous connecter</a>
+            </div>
+        </div> <!-- end profile-container -->
+        </main>
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html">contact@ecoride.fr</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

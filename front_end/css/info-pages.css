@@ -1,0 +1,216 @@
+/* Styles unifiés pour pages d'information EcoRide */
+/* S'appuie sur les breakpoints définis dans global.css : --bp-xs / --bp-sm / --bp-md / ... */
+
+/* =============================================================== */
+/* 1. BASE TYPOGRAPHIE / BODY                                     */
+/* =============================================================== */
+body {
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.55;
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #1B3B1B;
+    font-size: clamp(.95rem,.9rem + .3vw,1.05rem);
+}
+h1,h2,h3 {
+    color: #2e7d32;
+    font-weight: 600;
+    line-height: 1.15;
+}
+h1 {
+    margin-top: 0;
+    font-size: clamp(1.9rem,1.4rem + 2vw,2.6rem);
+}
+h2 {
+    margin-top: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+    font-size: clamp(1.35rem,1.1rem + 1vw,2rem);
+}
+h3 {
+    font-size: clamp(1.1rem,1rem + .6vw,1.4rem);
+}
+p, ul, ol {
+    margin: 14px 0;
+}
+ul, ol {
+    padding-left: 22px;
+}
+.small {
+    font-size: 12px;
+    color: #666;
+    margin-top: -4px;
+}
+
+/* =============================================================== */
+/* 2. TABLE DES MATIÈRES                                          */
+/* =============================================================== */
+.toc {
+    background: #f4f8f4;
+    border: 1px solid #d7e6d7;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 24px 0;
+}
+.toc a {
+    display: block;
+    color: #2e7d32;
+    text-decoration: none;
+    padding: 2px 0;
+    font-size: 14px;
+}
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================================== */
+/* 3. BLOCS D'INFORMATION                                         */
+/* =============================================================== */
+.note {
+    background: #fffbe6;
+    border-left: 4px solid #ffca28;
+    padding: 10px 14px;
+    margin: 18px 0;
+    border-radius: 4px;
+}
+.warn {
+    background: #fff0f0;
+    border-left: 4px solid #e53935;
+    padding: 10px 14px;
+    margin: 18px 0;
+    border-radius: 4px;
+}
+.badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+.step {
+    margin: 18px 0;
+}
+
+/* =============================================================== */
+/* 4. CARTES & GRILLES                                            */
+/* =============================================================== */
+.grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    margin: 16px 0 30px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 14px 16px;
+    background: #fafafa;
+}
+.card h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* =============================================================== */
+/* 5. CODE INLINE                                                 */
+/* =============================================================== */
+code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+/* =============================================================== */
+/* 6. NAVIGATION / LIENS                                          */
+/* =============================================================== */
+.back {
+    margin-top: 28px;
+}
+a {
+    color: #2e7d32;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================================== */
+/* 7. DÉTAILS (FAQ)                                               */
+/* =============================================================== */
+.details-container details {
+    margin: 14px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background: #fafafa;
+}
+.details-container summary {
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+.details-container summary::-webkit-details-marker {
+    color: #2e7d32;
+}
+
+/* =============================================================== */
+/* 8. PIED DE PAGE                                                */
+/* =============================================================== */
+footer {
+    margin-top: 50px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+footer a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.hr-light {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 36px 0;
+}
+
+/* =============================================================== */
+/* 9. MEDIA QUERIES                                               */
+/* =============================================================== */
+@media (max-width: 768px) { /* <= md */
+  body {
+      padding: 20px 20px 32px;
+  }
+  .grid {
+      gap: 14px;
+  }
+  .toc {
+      padding: 14px 16px;
+  }
+}
+@media (max-width: 640px) { /* <= sm */
+  body {
+      padding: 18px;
+  }
+  .grid {
+      grid-template-columns: 1fr;
+  }
+  h1 {
+      font-size: clamp(1.7rem,1.4rem + 2vw,2rem);
+  }
+}
+@media (max-width: 480px) { /* <= xs */
+  body {
+      padding: 16px;
+  }
+  .toc {
+      padding: 12px 14px;
+  }
+  .note, .warn {
+      padding: 10px 12px;
+  }
+}

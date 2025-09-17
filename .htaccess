@@ -1,0 +1,16 @@
+# Réécrit les URLs /api/... vers le front controller dans /public
+RewriteEngine On
+
+# Adapter si le dossier du projet a un autre nom que EcoRide
+RewriteBase /EcoRide/
+
+# Laisser passer fichiers ou dossiers existants
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Tout ce qui commence par api/ va vers public/index.php
+RewriteRule ^api/(.*)$ public/index.php [QSA,L]
+
+# (Optionnel) Vous pouvez plus tard router toutes les autres URLs vers public/index.php
+# RewriteRule ^.*$ public/index.php [QSA,L]

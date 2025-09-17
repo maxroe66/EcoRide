@@ -1,0 +1,615 @@
+/* =========================== */
+/* 1. VARIABLES CSS */
+/* =========================== */
+:root {
+    /* Breakpoints centralisés */
+    --bp-xs: 480px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 992px;
+    --bp-xl: 1200px;
+    
+    /* Espacement */
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+}
+
+/* =========================== */
+/* 2. RESET ET BASE */
+/* =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F4C3;
+    color: #1B3B1B;
+    line-height: 1.6;
+}
+
+/* =========================== */
+/* 3. LAYOUT PRINCIPAL */
+/* =========================== */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { 
+    flex: 1 0 auto; 
+}
+
+footer { 
+    flex-shrink: 0; 
+}
+
+/* =========================== */
+/* 4. HEADER ET NAVIGATION */
+/* =========================== */
+header {
+    background-color: #A5D6A7;
+    padding: 1rem 2rem;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2001;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1B3B1B;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.nav-links a.active {
+    color: #A1887F;
+    font-weight: 500;
+}
+
+/* Bannière info utilisateur */
+.user-info-banner {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1B3B1B;
+}
+
+/* Bouton burger (mobile) */
+.nav-toggle {
+    display: none;
+    background: linear-gradient(180deg,#FFFDE7,#FFF9C4);
+    border: 2px solid #2E7D32;
+    cursor: pointer;
+    padding: .55rem .6rem .45rem;
+    border-radius: 10px;
+    line-height: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    position: relative;
+    transition: background .25s ease, transform .25s ease;
+}
+
+.nav-toggle:focus-visible { 
+    outline: 2px solid #2E7D32; 
+}
+
+.nav-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background:#1B3B1B;
+    margin: 5px 0;
+    transition: transform .4s ease, opacity .4s ease;
+    border-radius: 2px;
+    display: block;
+}
+
+.nav-toggle:hover { 
+    background:#2E7D32; 
+    transform: translateY(-2px); 
+}
+
+.nav-toggle:hover .bar { 
+    background:#FFFFFF; 
+}
+
+.nav-toggle .sr-only { 
+    position:absolute; 
+    left:-9999px; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden; 
+}
+
+/* Utilitaire global pour contenu réservé aux lecteurs d'écran */
+.sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
+}
+
+/* Focus visible sur les liens de navigation */
+.nav-links a:focus-visible {
+    outline: 2px solid #2E7D32;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.nav-toggle.active .bar:nth-child(1){ 
+    transform: translateY(8px) rotate(45deg); 
+}
+
+.nav-toggle.active .bar:nth-child(2){ 
+    opacity:0; 
+}
+
+.nav-toggle.active .bar:nth-child(3){ 
+    transform: translateY(-8px) rotate(-45deg); 
+}
+
+/* =========================== */
+/* 5. FOOTER */
+/* =========================== */
+footer {
+    background-color: #A5D6A7;
+    padding: 1.5rem 2rem;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content a {
+    color: #1B3B1B;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-content a:hover {
+    color: black;
+}
+
+/* =========================== */
+/* 6. TITRES ET TYPOGRAPHIE */
+/* =========================== */
+.section-title {
+    color: #2E7D32;
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+}
+
+.section-subtitle {
+    color: #2E7D32;
+    font-size: clamp(1.15rem, 0.9rem + 1vw, 1.75rem);
+    font-weight: 500;
+    margin-bottom: .85rem;
+    line-height: 1.2;
+}
+
+/* =========================== */
+/* 7. FORMULAIRES */
+/* =========================== */
+.form-group {
+    flex: 1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #A5D6A7;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1rem;
+    color: #2E7D32;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #A1887F;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-form {
+    background-color: #A5D6A7;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =========================== */
+/* 8. BOUTONS */
+/* =========================== */
+.btn-primary {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #A1887F;
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background-color: #A1887F;
+    color: #F5F5DC;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #8D6E63;
+}
+
+/* Boutons spécialisés (alias pour compatibilité) */
+.search-btn {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.search-btn:hover {
+    background-color: #A1887F;
+}
+
+.search-btn:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+}
+
+.detail-btn {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.detail-btn:hover {
+    background-color: #8D6E63;
+}
+
+.submit-btn {
+    background-color: #2E7D32;
+    color: #F5F5DC;
+    border: none;
+    padding: 1.25rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #A1887F;
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================== */
+/* 9. CARTES ET CONTAINERS */
+/* =========================== */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* =========================== */
+/* 10. BADGES ET ÉLÉMENTS SPÉCIAUX */
+/* =========================== */
+.eco-badge {
+    background-color: #2E7D32;
+    color: #FFF9C4;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* =========================== */
+/* 11. MESSAGES ET ÉTATS */
+/* =========================== */
+.error-message {
+    background-color: #FFEBEE; /* rouge très clair */
+    border: 2px solid #E57373;
+    border-left: 6px solid #D32F2F;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    color: #C62828;
+    animation: fadeIn 0.35s ease;
+}
+.success-message {
+    background-color: #A5D6A7;
+    border: 2px solid #2E7D32;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Par défaut, ne pas afficher les zones de message si elles sont vides */
+.error-message:empty,
+.success-message:empty {
+    display: none;
+}
+
+.success-message h3 {
+    color: #2E7D32;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.success-message p {
+    color: #2E7D32;
+    line-height: 1.5;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #2E7D32;
+    font-size: 1.1rem;
+}
+
+/* =========================== */
+/* 12. ANIMATIONS */
+/* =========================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================== */
+/* 13. MEDIA QUERIES (MOBILE FIRST) */
+/* =========================== */
+
+/* Navigation mobile */
+@media (max-width: 768px) {
+    .nav-toggle { 
+        display: block; 
+    }
+    
+    nav { 
+        flex-wrap: wrap; 
+    }
+    
+    /* Masquer la nav mobile uniquement si JS actif */
+    html.has-js .nav-links { 
+        display: none; 
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background: rgba(165,214,167,0.95);
+        backdrop-filter: blur(3px);
+        margin-top: .65rem;
+        padding: .85rem 1rem 1rem;
+        gap: .85rem;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+        animation: fadeIn .35s ease;
+    }
+
+    .nav-links.open { 
+        display: flex !important; 
+    }
+    
+    .nav-links a { 
+        padding: .35rem 0; 
+        font-size: 1rem; 
+    }
+}
+
+/* Responsive général - Tablette */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .search-form {
+        padding: 1.5rem;
+    }
+
+    main { 
+        padding-bottom: 2.5rem; 
+    }
+}
+
+/* Mobile très petit */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .section-title { 
+        font-size: clamp(1.4rem, 1.1rem + 2vw, 1.8rem); 
+    }
+    
+    .section-subtitle { 
+        font-size: clamp(1rem, 0.9rem + 1.5vw, 1.25rem); 
+    }
+
+    header, footer {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .search-form {
+        padding: 1rem;
+    }
+
+    .eco-badge { 
+        padding: 0.15rem 0.5rem; 
+    }
+}
+
+/* Desktop large */
+@media (min-width: 992px) {
+    .page-container { 
+        max-width: 1400px; 
+        margin: 0 auto; 
+    }
+    
+    nav { 
+        padding-left: 1rem; 
+        padding-right: 1rem; 
+    }
+}
+
+/* Desktop très large */
+@media (min-width: 1400px) {
+    body { 
+        font-size: 1.05rem; 
+    }
+    
+    .section-title { 
+        font-size: 2.6rem; 
+    }
+}

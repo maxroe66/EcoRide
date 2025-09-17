@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EcoRide</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+ </head>
+ <body data-page="contact">
+    <div class="page-container">
+
+        <main>
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1>Contactez-nous</h1>
+                    <p>Une question, une suggestion, un problème ? Nous sommes là pour vous aider !</p>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Informations de contact -->
+                    <div class="contact-info">
+                        <h2>🌱 EcoRide - Covoiturage écologique</h2>
+                        
+                        <div class="info-section">
+                            <h3>📧 Contact direct</h3>
+                            <div class="contact-item">
+                                <span class="label">Email :</span>
+                                <a href="mailto:contact@ecoride.fr" class="contact-link">contact@ecoride.fr</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">Réponse :</span>
+                                <span>Sous 24h ouvrées</span>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>⏰ Support client</h3>
+                            <div class="contact-item">
+                                <span class="label">Lundi - Vendredi :</span>
+                                <span>9h00 - 18h00</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">Weekend :</span>
+                                <span>10h00 - 16h00</span>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>🏢 Notre mission</h3>
+                            <p>
+                                EcoRide s'engage pour un transport plus respectueux de l'environnement. 
+                                Notre plateforme favorise le covoiturage en voitures électriques pour 
+                                réduire l'empreinte carbone des déplacements.
+                            </p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>🔗 Liens utiles</h3>
+                            <div class="useful-links">
+                                <a href="mentions-legales.html" class="link-item">📋 Mentions légales</a>
+                                <a href="politique-confidentialite.html" class="link-item">🔒 Politique de confidentialité</a>
+                                <a href="faq.html" class="link-item">❓ FAQ</a>
+                                <a href="guide-utilisation.html" class="link-item">📖 Guide d'utilisation</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire de contact -->
+                    <div class="contact-form-section">
+                        <h2>📝 Envoyez-nous un message</h2>
+                        
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="contactName">Nom complet *</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email *</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactSubject">Sujet *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="question">Question générale</option>
+                                    <option value="probleme">Problème technique</option>
+                                    <option value="suggestion">Suggestion d'amélioration</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" name="message" rows="6" 
+                                         placeholder="Décrivez votre demande en détail..." required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contactConsent" name="consent" required>
+                                    <span class="checkmark"></span>
+                                    J'accepte que mes données soient utilisées pour traiter ma demande *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submitBtn" data-loading-label="Envoi...">
+                                📤 Envoyer le message
+                            </button>
+                        </form>
+
+                        <div class="success-message" id="successMessage" style="display: none;" aria-live="polite">
+                            <h3>✅ Message envoyé avec succès !</h3>
+                            <p>Nous vous répondrons dans les plus brefs délais à l'adresse : <span id="confirmEmail"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="../js/main.js"></script>
+ </body>
+ </html>

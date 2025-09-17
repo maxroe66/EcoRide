@@ -1,0 +1,66 @@
+/* =============================================================== */
+/* 1. CONTENEUR PRINCIPAL                                         */
+/* =============================================================== */
+.user-dashboard {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+/* =============================================================== */
+/* 2. EN-TÊTE / TITRE SECTION                                     */
+/* =============================================================== */
+.dashboard-section h3 {
+    color: #2E7D32;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* =============================================================== */
+/* 3. FORMULAIRE (GROUPES / LABELS / CHAMPS)                      */
+/* =============================================================== */
+.form-group { margin-bottom: 1.2rem; }
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #2E7D32;
+}
+.form-input, .form-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #A5D6A7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #F5F5DC;
+    transition: border 0.2s;
+}
+.form-input:focus, .form-select:focus { border-color: #2E7D32; outline: none; }
+
+/* =============================================================== */
+/* 4. BOUTONS                                                     */
+/* =============================================================== */
+.form-btn {
+    width: 100%;
+    background: #2E7D32;
+    color: #F5F5DC;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.form-btn:hover { background: #A1887F; }
+.btn-secondary { background: #A1887F; margin-top: 1rem; }
+.btn-secondary:hover { background: #8D6E63; }
+
+/* =============================================================== */
+/* 5. MESSAGE DE RETOUR                                           */
+/* =============================================================== */
+#ajoutCovoiturageMessage { margin-top: 1em; text-align: center; }

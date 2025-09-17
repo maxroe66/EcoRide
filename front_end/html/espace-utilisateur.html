@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Utilisateur - EcoRide</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/espace-utilisateur.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body data-page="espace-utilisateur">
+    <div class="page-container">
+        <main>
+            <div class="user-dashboard">
+                <div class="dashboard-section" id="ajoutVehiculeSection">
+                    <h3>Ajouter un véhicule</h3>
+                    <form id="formAjoutVehicule">
+                        <div class="form-group">
+                            <label class="form-label" for="marque">Marque</label>
+                            <input class="form-input" type="text" name="marque" id="marque" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="modele">Modèle</label>
+                            <input class="form-input" type="text" name="modele" id="modele" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="couleur">Couleur</label>
+                            <input class="form-input" type="text" name="couleur" id="couleur" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="plaque">Plaque d'immatriculation</label>
+                            <input class="form-input" type="text" name="plaque" id="plaque" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="date_premiere_immatriculation">Date de première immatriculation</label>
+                            <input class="form-input" type="date" name="date_premiere_immatriculation" id="date_premiere_immatriculation" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="energie">Énergie</label>
+                            <select class="form-input" id="energie" name="energie" required>
+                                <option value="">Choisir...</option>
+                                <option value="essence">Essence</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="electrique">Électrique</option>
+                                <option value="hybride">Hybride</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Section préférences (uniquement pour devenir chauffeur) -->
+                        <div id="preferencesSection" style="display: none;">
+                            <h4 style="color: #4A7C59; margin-top: 2rem; margin-bottom: 1rem;">Préférences de conduite</h4>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Fumeur</label>
+                                <select class="form-input" name="fumeur" id="fumeur">
+                                    <option value="">Choisir...</option>
+                                    <option value="accepte">J'accepte les fumeurs</option>
+                                    <option value="refuse">Je refuse les fumeurs</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Animaux</label>
+                                <select class="form-input" name="animaux" id="animaux">
+                                    <option value="">Choisir...</option>
+                                    <option value="accepte">J'accepte les animaux</option>
+                                    <option value="refuse">Je refuse les animaux</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="autresPreferences">Autres préférences</label>
+                                <textarea class="form-input" name="autresPreferences" id="autresPreferences" 
+                                         placeholder="Décrivez vos autres préférences de voyage (musique, discussion, etc.)" 
+                                         rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form-btn">
+                            <span id="btnText">Ajouter le véhicule</span>
+                        </button>
+                        <div id="ajoutVehiculeMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html">contact@ecoride.fr</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </footer>
+    </div>
+    <!-- Entry point unique -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
