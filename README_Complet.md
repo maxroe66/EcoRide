@@ -161,5 +161,9 @@ Formulation utile devant le jury:
 - Connexion MySQL: adaptez host/user/password dans `backend/config/config.php`
 - MongoDB non installé: les avis passeront par le fallback SQL (`avis_fallback`)
 
+## 13) Lien du tableau Kanban : 
+
+https://trello.com/invite/b/68a9de30f74a1f0afbd8c3d0/ATTIa55b19cb101a14461a811192b4e4e432F4967AF9/ecoride3000
+
 ---
 (c) Projet pédagogique – ECF EcoRide
